@@ -17,10 +17,11 @@ public class RabinKarp{
         this.powers = new long[this.s.length() + 1];
         this.computeHashAndPow();
     }
-
+    /**
+    * Computes the prefix hash values and computes the prefix powers.
+    */
     private void computeHashAndPow(){
         this.powers[0] = 1;
-
         for(int i=1; i<=this.s.length(); i++){
             long c = (long) this.s.charAt(i-1) - 'a' + 1;
             this.prefix_hash[i] = ((prefix_hash[i-1]*PRIME1 + c) % MOD1);
@@ -35,6 +36,6 @@ public class RabinKarp{
     * @return The hash of the substring [l,r].
     */
     public long getHashSubstring(int l, int r){
-        return (prefix_hash[r+1] - prefix_hash[l] * powers[r - l + 1] % MOD1 + MOD1) % MOD1;
+        return (this.prefix_hash[r+1] - this.prefix_hash[l] * this.powers[r - l + 1] % MOD1 + MOD1) % MOD1;
     }
 }
