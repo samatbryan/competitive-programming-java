@@ -10,6 +10,7 @@ class RabinKarp:
     hash2 = rb.getHashSubstring(2,3)
     // hash1 == hash2 
     '''
+    
     PRIME1 = 3137
     PRIME2 = 1009
     MOD1 = 1000000007
