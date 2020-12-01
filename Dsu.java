@@ -3,9 +3,10 @@ public class Dsu<T> {
     private HashMap<T, T> parent;
     private HashMap<T, Integer> size;
     private int roots;
-    
+
     /**
-     * Class constructor for the Disjoint Set Union class, uses generics
+     * Class constructor for the Disjoint Set Union class, uses generics. Does not require any 
+     * initial set number of nodes in the graph. 
      * example usage:
      * using integers: Dsu<Integer> dsu = new Dsu<Integer>()
      * using pairs: Dsu<Pair<Integer,Integer>> dsu = new Dsu<Pair<Integer,Integer>>();
