@@ -44,11 +44,9 @@ public class Dsu<T> {
 
     /**
      * Time Complexity: O(log(n))
-     * Takes a new vertex v and returns the root. Uses Path Compression and Size Heuristics
-     * Path Compression is where you find the root, and set all node's parent along that path to
-     * root
-     * @param v The vertex to find the root of
-     * @return The root of the vertex v
+     * Takes a two vertex a and b and joins the two sets. Uses Union by Size
+     * @param a The first set to join
+     * @param b The second set to join
      */
     void union_set(T a, T b) {
         a = find_set(a);
