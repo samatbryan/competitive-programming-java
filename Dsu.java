@@ -1,16 +1,18 @@
 public class Dsu<T> {
+
     private HashMap<T, T> parent;
     private HashMap<T, Integer> size;
-
+    private int roots;
     /**
      * Class constructor for the Disjoint Set Union class, uses generics
      * example usage:
      * using integers: Dsu<Integer> dsu = new Dsu<Integer>()
      * using pairs: Dsu<Pair<Integer,Integer>> dsu = new Dsu<Pair<Integer,Integer>>();
-     */
+     */ 
     public Dsu() {
         this.parent = new HashMap<T, T>();
         this.size = new HashMap<T, Integer>();
+        this.roots = 0;
     }
 
     /**
@@ -21,6 +23,7 @@ public class Dsu<T> {
     void make_set(T v) {
         parent.put(v, v);
         size.put(v, 1);
+        roots ++;
     }
 
     /**
@@ -59,6 +62,16 @@ public class Dsu<T> {
                 parent.put(b, a);
                 size.put(a, size.get(b) + size.get(a));
             }
+            roots --;
         }
+    }
+
+    /**
+     * Time Complexity: O(1)
+     * Returns the number of roots 
+     * @return The number of distinct roots
+     */
+    int num_roots() {
+        return this.roots;
     }
 }
