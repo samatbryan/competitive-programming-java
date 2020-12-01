@@ -3,6 +3,7 @@ public class Dsu<T> {
     private HashMap<T, T> parent;
     private HashMap<T, Integer> size;
     private int roots;
+    
     /**
      * Class constructor for the Disjoint Set Union class, uses generics
      * example usage:
