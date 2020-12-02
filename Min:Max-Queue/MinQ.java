@@ -1,21 +1,21 @@
-public class MaxQ<T extends Comparable<T>>{
+public class MinQ<T extends Comparable<T>>{
     
     private LinkedList<T> q;
     
-    public MaxQ(){
+    public MinQ(){
         this.q = new LinkedList<T>();
     }
     
-    public T get_max(){
+    public T get_min(){
         return q.getFirst();
     }
 
-    public T pop_max(){
+    public T pop_min(){
         return q.removeFirst();
     }
 
     public void add(T item){
-        while(!q.isEmpty() && (item.compareTo(q.getLast()) > 0)){
+        while(!q.isEmpty() && (item.compareTo(q.getLast()) < 0)){
             q.removeLast();
         }
         q.addLast(item);
