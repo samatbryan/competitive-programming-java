@@ -9,6 +9,7 @@ public class RabinKarp{
     final int MOD2 = 998244353;
 
     /**
+    * Time Complexity: O(N)
     * Class constructor specifiying the string s we want to work with.
     */
     RabinKarp(String s){
@@ -18,6 +19,7 @@ public class RabinKarp{
         this.computeHashAndPow();
     }
     /**
+    * Time Complexity: O(N)
     * Computes the prefix hash values and computes the prefix powers.
     */
     private void computeHashAndPow(){
@@ -30,6 +32,7 @@ public class RabinKarp{
     }
 
     /**
+    * Time Complexity: O(1)
     * Takes a left and right inclusive indices that resembles a substring and calculates the hash in O(1) time 
     * @param l The left of the substring
     * @param r The right of the substring
