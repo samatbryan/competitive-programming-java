@@ -10,7 +10,6 @@ public class LightDsu {
          * example usage:
          * LightDsu dsu = new LightDsu();
          */
-
         LightDsu(int N) {
             this.N = N;
             this.roots = N;
