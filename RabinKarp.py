@@ -10,7 +10,7 @@ class RabinKarp:
     hash2 = rb.getHashSubstring(2,3)
     // hash1 == hash2 
     '''
-    
+
     PRIME1 = 3137
     PRIME2 = 1009
     MOD1 = 1000000007
@@ -31,7 +31,7 @@ class RabinKarp:
             self._powers[i] = (self._powers[i - 1] * self.PRIME1) % self.MOD1
 
     def getHashSubstring(self, left: int, right: int):
-        '''Calculates in O(1) the hash of the substring[left:right] INCLUSIVE
+        ''' Calculates in O(1) the hash of the substring[left:right] INCLUSIVE
 
         :param left: The left index of the substring inclusive
         :type left: int

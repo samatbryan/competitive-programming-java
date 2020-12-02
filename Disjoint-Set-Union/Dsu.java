@@ -74,4 +74,14 @@ public class Dsu<T> {
     int num_roots() {
         return this.roots;
     }
+
+    /**
+     * Time Complexity: O(1)
+     * Returns the size of set that contains a
+     * @return The size of the set rooted at a
+     */
+    int set_size(T a) {
+        if(!parent.containsKey(a)) return 0;
+        return this.size.get(find_set(a));
+    }
 }
