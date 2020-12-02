@@ -1,10 +1,9 @@
 import java.util.*;
 
 public class Lis{
-
-
     /**
-    * Takes an array and returns the length of the LIS using binary search. O(Nlog(N))
+    * Time Complexity: O(NLog(N))
+    * Takes an array and returns the length of the LIS using binary search. 
     * @param nums The array to find length of LIS
     * @return an int representing the length of the LIS
     */
@@ -38,7 +37,8 @@ public class Lis{
     }
 
     /**
-    * Takes an array and returns the length of the LIS using binary search. O(Nlog(N))
+    * Time Complexity: O(NLog(N))
+    * Takes an array and returns the length of the LIS using binary search.
     * @param nums An ArrayList<Integer> to find length of LIS
     * @return an int representing the length of the LIS
     */
