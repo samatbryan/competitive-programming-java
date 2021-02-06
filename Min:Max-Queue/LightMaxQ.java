@@ -1,13 +1,13 @@
-public class MaxQ<T extends Comparable<T>> {
-    private LinkedList<T> q;
+public class LightMaxQ {
+    private LinkedList<Integer> q;
 
     /**
      * Class constructor for the MaxQ class using Generic Type. A MaxQ inserts item
      * in O(1) time and fetches the maximum element in O(1) time example usage: MaxQ
      * maxq = new MaxQ();
      */
-    public MaxQ() {
-        this.q = new LinkedList<T>();
+    public LightMaxQ() {
+        this.q = new LinkedList<Integer>();
     }
 
     /**
@@ -16,7 +16,7 @@ public class MaxQ<T extends Comparable<T>> {
      * 
      * @return The maximum element in the queue
      */
-    public T get_max() {
+    public int get_max() {
         return q.getFirst();
     }
 
@@ -26,7 +26,7 @@ public class MaxQ<T extends Comparable<T>> {
      * 
      * @return The maximum element in the queue
      */
-    public T pop_max() {
+    public int pop_max() {
         return q.removeFirst();
     }
 
@@ -36,8 +36,8 @@ public class MaxQ<T extends Comparable<T>> {
      * 
      * @param item The item to add to the queue
      */
-    public void add(T item) {
-        while (!q.isEmpty() && (item.compareTo(q.getLast()) > 0)) {
+    public void add(int item) {
+        while (!q.isEmpty() && (item > q.getLast())) {
             q.removeLast();
         }
         q.addLast(item);

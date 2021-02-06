@@ -1,12 +1,13 @@
 import java.util.*;
 
-public class Lis{
+public class Lis {
     /**
-    * Time Complexity: O(NLog(N))
-    * Takes an array and returns the length of the LIS using binary search. 
-    * @param nums The array to find length of LIS
-    * @return an int representing the length of the LIS
-    */
+     * Time Complexity: O(NLog(N)) Takes an array and returns the length of the LIS
+     * using binary search.
+     * 
+     * @param nums The array to find length of LIS
+     * @return an int representing the length of the LIS
+     */
     public int lis(int[] nums) {
         int n = nums.length;
         int res = 0;
@@ -37,11 +38,12 @@ public class Lis{
     }
 
     /**
-    * Time Complexity: O(NLog(N))
-    * Takes an array and returns the length of the LIS using binary search.
-    * @param nums An ArrayList<Integer> to find length of LIS
-    * @return an int representing the length of the LIS
-    */
+     * Time Complexity: O(NLog(N)) Takes an array and returns the length of the LIS
+     * using binary search.
+     * 
+     * @param nums An ArrayList<Integer> to find length of LIS
+     * @return an int representing the length of the LIS
+     */
     public int lis(ArrayList<Integer> nums) {
         int n = nums.size();
         int res = 0;
