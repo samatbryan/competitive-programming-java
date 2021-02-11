@@ -10,7 +10,6 @@ public class bitmask {
                 break;
             int next_mask = mask ^ submask;
         }
-
     }
 
     void include_zero() {

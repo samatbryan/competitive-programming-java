@@ -1,5 +1,6 @@
 
-static ArrayList<Integer> prime_factors(int n){
+// return the prime factors of n,
+static ArrayList<Integer> prime_factors(int n){  // O(sqrt(n))
     int d = 2;
     while(d * d <= n){
         while(n % d == 0){

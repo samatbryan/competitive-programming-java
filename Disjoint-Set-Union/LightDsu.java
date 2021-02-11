@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class LightDsu {
     private int[] size;
     private int[] parents;
@@ -63,5 +65,14 @@ public class LightDsu {
      */
     public int num_roots() {
         return this.roots;
+    }
+
+    /**
+     * Time Complexity: O(LogN) Returns the size of set that contains a
+     * 
+     * @return True if a and b are in the same set
+     */
+    boolean connected(int a, int b) {
+        return find_set(a) == find_set(b);
     }
 }
