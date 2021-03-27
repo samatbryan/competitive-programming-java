@@ -2,6 +2,9 @@ import java.util.*;
 
 public class Lis {
     /**
+     * WARNING: RETURNS LONGEST STRICTLY INCREASING SUBSEQUENCE. CHANGE IF
+     * NON-DECREASING
+     * 
      * Time Complexity: O(NLog(N)) Takes an array and returns the length of the LIS
      * using binary search.
      * 
@@ -38,6 +41,9 @@ public class Lis {
     }
 
     /**
+     * WARNING: RETURNS LONGEST STRICTLY INCREASING SUBSEQUENCE. CHANGE IF
+     * NON-DECREASING
+     * 
      * Time Complexity: O(NLog(N)) Takes an array and returns the length of the LIS
      * using binary search.
      * 
