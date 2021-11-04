@@ -4,20 +4,23 @@
 // g++ -std=c++11 -O2 -Wall test.cpp -o test
 // printf("%.9f\n", x); PRECISION
 
-#include <algorithm>
-#include <cmath>
 #include <iostream>
 #include <unordered_set>
 #include <vector>
-
 using namespace std;
-using ll = long long;
 
 #define F first
 #define S second
 
 const long long MOD = 1e9 + 7;
 const double EPS = 1e-9;
+
+struct segtree {
+    int size;
+    vector<int> operations;
+
+    void init(int n) {}
+};
 
 void solve() {}
 

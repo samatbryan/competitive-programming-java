@@ -17,7 +17,10 @@ struct segtree
 
     void apply_operation(long long &a, long long b)
     {
-        a = operation(a, b);
+        if (a == NO_OPERATION || a == b - 1)
+        {
+            a = operation(a, b);
+        }
     }
 
     void init(int n)

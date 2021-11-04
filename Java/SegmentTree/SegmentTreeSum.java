@@ -1,4 +1,4 @@
-public class SegmentTree {
+public class SegmentTreeSum {
     int n;
     int size;
     long[] sums;
@@ -9,7 +9,7 @@ public class SegmentTree {
      * 
      * @param n The total number of elements in the array
      */
-    public SegmentTree(int n) {
+    public SegmentTreeSum(int n) {
         this.n = n;
         this.size = 1;
         while (this.size < n) {
@@ -38,7 +38,6 @@ public class SegmentTree {
         build(a, 0, 0, size);
     }
 
-    
     /**
      * O(log(size)) operation for getting the sum of interval [left, right).
      * 
@@ -62,7 +61,7 @@ public class SegmentTree {
      */
     private void set(int idx, int val, int x, int l_idx, int r_idx) {
         if (r_idx - l_idx == 1) { // the leaf node
-            sums[x] = val;
+            sums[x] += val;
             return;
         }
         int m_idx = (l_idx + r_idx) / 2;

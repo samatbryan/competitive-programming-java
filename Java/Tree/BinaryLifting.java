@@ -30,6 +30,10 @@ class TreeAncestor {
         }
         return cur;
     }
+
+    public int LCA(int a, int b) {
+        
+    }
 }
 
 /**

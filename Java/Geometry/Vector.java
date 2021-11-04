@@ -35,4 +35,12 @@ public class Vector {
         double d = Math.sqrt(norm2());
         return scale(1 / d);
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Vector))
+            return false;
+        return Math.abs(((Vector) o).x - this.x) <= EPS && Math.abs(((Vector) o).y - this.y) <= EPS;
+    }
+
 }

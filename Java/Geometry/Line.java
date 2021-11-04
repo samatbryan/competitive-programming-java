@@ -4,8 +4,11 @@ public class Line {
     static final double INF = 1e9, EPS = 1e-9;
 
     double a, b, c;
+    Point p, q;
 
     Line(Point p, Point q) {
+        this.p = p;
+        this.q = q;
         if (Math.abs(p.x - q.x) < EPS) {
             a = 1;
             b = 0;
@@ -43,6 +46,19 @@ public class Line {
             y = -a * x - c;
 
         return new Point(x, y);
+    }
+
+    Point intersect(Line ls, boolean segment) {
+        Line l1 = new Line(p, q), l2 = new Line(ls.p, ls.q);
+
+        if (l1.parallel(l2)) {
+            return null;
+        }
+        Point c = l1.intersect(l2);
+        if (c.between(p, q) && c.between(ls.p, ls.q)) {
+            return c;
+        }
+        return null;
     }
 
     Point closestPoint(Point p) {
